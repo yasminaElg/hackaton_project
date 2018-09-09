@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "express": "4.16.3",
-    "express-promise-router": "3.0.3"
+    "express-promise-router": "3.0.3",
+    "body-parser": "1.18.3"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
