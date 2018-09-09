@@ -7,7 +7,7 @@ export const githubController = {
       console.log(`User ${req.body.pusher.name} just pushed to repository ${req.body.repository.name}`)
       exec(`git -C ${path} reset --hard`)
       exec(`git -C ${path} pull -f`)
-      exec(`npm -C ${path} start`)
+      exec(`npm -C ${path} run start`)
     })
 
     res.end()
