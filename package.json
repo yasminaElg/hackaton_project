@@ -10,7 +10,7 @@
     "build": "babel src --copy-files --out-dir build",
     "prestart": "npm install && npm run build",
     "start": "pm2 stop auto-deploy && pm2 start build/index.js --name \"auto-deploy\"",
-    "pm2:setup": "start build/index.js --name \"auto-deploy\" && pm2 stop auto-deploy"
+    "pm2:setup": "pm2 start build/index.js --name \"auto-deploy\" && pm2 stop auto-deploy"
   },
   "dependencies": {
     "express": "4.16.3",
