@@ -8,7 +8,7 @@
     "dev": "nodemon src/index.js --exec babel-node src/index.js",
     "prebuild": "rm -r build || true",
     "build": "babel src --copy-files --out-dir build",
-    "prestart": "npm install && npm run build",
+    "prestart": "yarn && yarn build",
     "start": "pm2 stop auto-deploy && pm2 start build/index.js --name \"auto-deploy\"",
     "pm2:setup": "pm2 start build/index.js --name \"auto-deploy\" && pm2 stop auto-deploy"
   },
