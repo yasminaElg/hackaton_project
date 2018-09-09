@@ -2,8 +2,8 @@
   "name": "auto-deploy",
   "version": "1.0.0",
   "description": "Auto deployment server",
-  "main": "src/index.js",
   "author": "Arnaud Gathy",
+  "license": "MIT",
   "scripts": {
     "dev": "nodemon src/index.js --exec babel-node src/index.js",
     "prebuild": "rm -r build || true",
