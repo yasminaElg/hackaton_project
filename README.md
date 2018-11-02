@@ -1,4 +1,4 @@
-# PiouPiou Bakend
+# PiouPiou Backend
 - Clone this repo
 - run `yarn` to install dependencies
 - Run the backend on `http://localhost:3003 with `yarn start`
