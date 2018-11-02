@@ -12,7 +12,8 @@
   "dependencies": {
     "express": "^4.16.4",
     "express-promise-router": "^3.0.3",
-    "body-parser": "^1.18.3"
+    "body-parser": "^1.18.3",
+    "boom": "^7.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

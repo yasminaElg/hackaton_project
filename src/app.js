@@ -1,6 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import { healthRouter } from './routes/health';
+import { systemRouter } from './routes/system';
 
 export const createExpressApp = () => {
   const app = express()
@@ -9,7 +9,7 @@ export const createExpressApp = () => {
   app.use(bodyParser.json())
 
   // Routes
-  app.use('/health', healthRouter())
+  app.use('/system', systemRouter())
 
   return app
 }
