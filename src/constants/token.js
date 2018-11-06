@@ -1,3 +1,1 @@
-import crypto from 'crypto'
-
-export const token = crypto.randomBytes(64).toString('hex')
+export const token = 'PiouPiou_W!ll-C0nQu3R*The+W0r|d'
