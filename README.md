@@ -28,3 +28,11 @@ The database, `import {database} from '../database/database'`, comes with 5 func
 - `update(id, data)` : replace the value with the associated `id` with the provided `data
 
 The database don't check for data format, it's your responsability to validate the incoming data with a library like JOI (see the guide for when to add validation)
+
+## Run the DB
+
+Use `docker-compose up`
+
+## TypeORM config
+
+Use `src/database/config.js`
