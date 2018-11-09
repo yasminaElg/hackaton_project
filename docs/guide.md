@@ -131,14 +131,14 @@ Let's get started with the backend :
 Now, time to add a backend to your React app to be able to CRUDL hackatons from a database.
 
 To save you the hassle to make a new Node project, we've made a ready to use backend project to get started.
-Go to [this Github project](https://github.com/shippr-team/pioupiou-backend) and follow the instruction in the `README.md` to start working on the backend and to know what tools are at your disposal and how they work.
+Go to [this Github project](https://github.com/shippr-team/pioupiou-backend) (here) and read the `README.md` to know what tools are at your disposal and how they work.
 
 The objective is to make a public REST API for the front to connect to (Authentication to make it private will come later).
 It should consist of 5 routes for all CRUDL actions :
 
 - A get all route, to fetch the hackaton list.
 - A get one route, to fetch a specific hackaton.
-- A create route, to create new hackatons and store them in the "DB".
+- A create route, to create a new hackatons and store it in the "DB".
 - An update route, to update an existing hackaton.
 - A delete route, to delete an existing hackaton.
 
@@ -173,6 +173,7 @@ The admin dashboard should have :
 - A button to create a new hackaton.
 - A form to create / update hackatons which will perform requests to the backend.
 
+You should have all the knowledge necessary to create your own forms with react.
 You can also plug the landing page to the read route, to fetch all hackaton data and replace the placeholder / lorem you used before with the real DB data.
 
 To finish off, the admin side should only be accessed by authorized member only. We won't make a full login / create account process. We will use the authentication token provided by the backend.
@@ -184,7 +185,7 @@ You're free to make it look the way you want ! Have fun :)
 ## Training: JOI
 
 > - _JOI live coding demo with Arnaud_
-> - _Introduction to authentication_
+> - _Introduction to the authentication flow_
 
 ## Task: Backend - Secure backend with MORE MIDDLEWARES !
 
@@ -250,4 +251,12 @@ Now that you understand what's Redux and what problems it can solve, use it to s
 
 For the forms, you now see why final-form is important, and how easy to use it is. Change your "vanilla" forms and implement Final Form everywhere.
 
-### It's done ! Yay \o/ Your project is nice and shiny, now time to join the battlefield and work with us on the Shippr Projects :)
+### You're done with the project ! Yay \o/ Now, time to join the battlefield, but first ...
+
+## Training: Introduction to dev processes
+
+> - _Jira introduction with Arnaud_
+> - _GIT introduction with Arnaud_
+> - _Pull requests introduction with Arnaud_
+
+### Now you're really ready to take arms an work on the shippr's products :)
