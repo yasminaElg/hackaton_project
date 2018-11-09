@@ -48,7 +48,7 @@ You will be making a React-based web app and its backend to manage the Hackatons
 
 # Let's get started
 
-## Training: Introduction to JS & React
+## Training
 
 Let's kick off your first day with some trainings :
 
@@ -119,7 +119,7 @@ You should make the landing page look like this :
 
 [See the full design here](https://projects.invisionapp.com/prototype/hackathon-cjo4ea2kt005izz01ume85nlm/play/edb83548)
 
-## Training: Introduction to Node.js, Express
+## Training
 
 Let's get started with the backend :
 
@@ -155,7 +155,7 @@ Don't forget to :
 I'll let you get into this, and implement the routes the way you like.
 The point is to be able to acces the API from the front via an URL like `https://localhost:3003/hackatons/` to perform the 5 CRUDL actions.
 
-## Training: Axios
+## Training
 
 > - _React Router live coding demo with Arnaud_
 > - _Axios live coding demo with Arnaud_
@@ -164,17 +164,17 @@ The point is to be able to acces the API from the front via an URL like `https:/
 
 Now that you have a backend running, you can send requests to CRUDL data.
 
-To be able to CRUDL data, you need an admin interface to do so.
-So the first step is to create a new page on the app, and add navigation (via React Router) to access it.
+The first step is to connect the front-end hackaton list to the real DB.
+Plug the landing page to the read route, to fetch all hackaton data and replace the placeholder / lorem you used before with the real DB data.
 
-The admin dashboard should have :
+To be able to create, update or delete hackatons, you need an admin interface to do so.
+So the next step is to create a new page on the app, and add navigation (via React Router) to access it via the button on the landing page.
 
-- A list of all hackaton (fetched from the backend, via axios) with, for each, an upate and delete button.
-- A button to create a new hackaton.
-- A form to create / update hackatons which will perform requests to the backend.
+The admin part should be composed of
+- A list of ALL hackatons, with buttons to update or delete on each row
+- A form to create / update hackatons
 
 You should have all the knowledge necessary to create your own forms with react.
-You can also plug the landing page to the read route, to fetch all hackaton data and replace the placeholder / lorem you used before with the real DB data.
 
 To finish off, the admin side should only be accessed by authorized member only. We won't make a full login / create account process. We will use the authentication token provided by the backend.
 You should prevent acces to the admin side to anyone without an authentication token.
@@ -182,7 +182,7 @@ To simulate the use of a "login" functionnality you can just have a `Login` butt
 
 You're free to make it look the way you want ! Have fun :)
 
-## Training: JOI
+## Training
 
 > - _JOI live coding demo with Arnaud_
 > - _Introduction to the authentication flow_
@@ -219,7 +219,7 @@ You should add middlewares to the routes to validates the data received to match
 
 Go on and try this before going to the next section.
 
-## Training: DB with Docker, TypeORM
+## Training
 
 > - _Docker introduction with Arnaud_
 > - _TypeORM live coding demo with Arnaud_
@@ -239,7 +239,7 @@ When the entity is created, you can start updating the routes to implement TypeO
 
 In the end, the app should work exaclty like before but instead of having an in-memory you will have a real and persisting DB !
 
-## Training: Advanced stuff
+## Training
 
 > - _Redux introduction with Arnaud_
 > - _Advanced React with Antonio_
@@ -253,7 +253,7 @@ For the forms, you now see why final-form is important, and how easy to use it i
 
 ### You're done with the project ! Yay \o/ Now, time to join the battlefield, but first ...
 
-## Training: Introduction to dev processes
+## Training
 
 > - _Jira introduction with Arnaud_
 > - _GIT introduction with Arnaud_
