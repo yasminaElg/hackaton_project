@@ -162,13 +162,17 @@ The point is to be able to acces the API from the front via an URL like `https:/
 
 ## Task: Frontend - Create forms and connect to the REST API
 
+### Front-side
+
 Now that you have a backend running, you can send requests to CRUDL data.
 
-The first step is to connect the front-end hackaton list to the real DB.
+The first step is to connect the front-end hackaton list to the real hackaton data.
 Plug the landing page to the read route, to fetch all hackaton data and replace the placeholder / lorem you used before with the real DB data.
 
+### Back-side
+
 To be able to create, update or delete hackatons, you need an admin interface to do so.
-So the next step is to create a new page on the app, and add navigation (via React Router) to access it via the button on the landing page.
+So the next step is to create a new page on the app, and add navigation (via React Router) to access it via the button on the landing page (authorization later).
 
 The admin part should be composed of
 - A list of ALL hackatons, with buttons to update or delete on each row
@@ -176,7 +180,10 @@ The admin part should be composed of
 
 You should have all the knowledge necessary to create your own forms with react.
 
+### Authorizations
+
 To finish off, the admin side should only be accessed by authorized member only. We won't make a full login / create account process. We will use the authentication token provided by the backend.
+
 You should prevent acces to the admin side to anyone without an authentication token.
 To simulate the use of a "login" functionnality you can just have a `Login` button which calls the `/system/login` route on the backend to get a token. When a user has a token, access is granted.
 
