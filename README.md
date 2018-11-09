@@ -1,5 +1,9 @@
 # PiouPiou Backend
 
+## PiouPiou training
+
+This repo is used in the first week project for new Shippr interns. sett `docs/guide.md`
+
 ## Setup
 - Clone this repo
 - run `yarn` to install dependencies

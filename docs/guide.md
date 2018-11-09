@@ -11,11 +11,11 @@
 
 You will be building a Hakacton Management web app, step-by-step
 
-This doc is going to guide through every steps to setup and implement the project, it will tell you what to start with and what to do.
+This doc is going to guide you through every steps to setup and implement the project, it will tell you what to start with and what to do.
 You will go through every big aspects of a project like : User interface development, design integration and backend implementation.
 You'll just have to follow the guide to discover and try / fiddle with new technologies / libraries by yourself.
 
-Before introducing you to new, big, technologies or libraries we'll give you a little training or a livecoding session to give you all the keys to start using it.
+Before using new, big, technologies or libraries we'll give you a little introduction or a livecoding session to give you all the keys to start using it.
 
 You should lookup things you don't know on the internet.
 Learning by yourself via Google, Stackoverflow, libraries docs / API or any other knowledge base is a major part of a developer's life and is a skill you'll need to have and improve.
@@ -26,7 +26,7 @@ Strength and honor.
 
 # What are you building ?
 
-You will be making a React-based web app and its backend to manage the monthly Hackatons.
+You will be making a React-based web app and its backend to manage the Hackatons.
 
 ## Features
 
@@ -104,13 +104,13 @@ You can edit `App.js` and see the modification in your browser, the react app re
 ## Task: Frontend - The landing page
 
 Your first task is to implement the landing page of the app.
-The front-side of the app is a single page containing all the information of the upcoming hackaton, and a list of the previous one.
+The front-side of the app is a single page containing all the information of the upcoming hackaton, and a list of the previous one. See the design below.
 
-- The information for the upcoming hackaton are : `title`, `date` (a DateTime object ! See Luxon library doc), `address` and `description`
+- The list of hackaton, with the next one showcased
 - A button to access the admin side (will be useable later)
-- The list of past hackatons have the same information
 
-Since we have no database, you can just fill the text for title, description, etc with placeholder or lorem text for now, it will be fetched later from the backend.
+A hackaton has a `title`, a `date` (a DateTime object ! See the Luxon library doc), an `address` and a `description`.
+Since we have no database, you can just fill the hackatons with placeholder or lorem text for now, it will be fetched later from the backend.
 
 Try and discover React ! Make use of components.
 
