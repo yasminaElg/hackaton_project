@@ -7,7 +7,7 @@ This repo is used in the first week project for new Shippr interns. See `docs/gu
 ## Setup
 - Clone this repo
 - run `yarn` to install dependencies
-- Run the backend on `http://localhost:3003 with `yarn start`
+- Run the backend on `http://localhost:3003` with `yarn start`
 - if `http://localhost:3003/system/ping` respond with `pong`, the backend is running correctly
 
 ## Features
@@ -27,9 +27,9 @@ The database, `import {database} from '../database/database'`, comes with 5 func
 
 - `getAll()` : returns an array containing all db values
 - `getOne(id)` : returns the value which has the provided `id`
-- `create(data)` : creates a value with the provided `data`
+- `create(data)` : creates a value with the provided `data`. Returns the ID of the created value
 - `remove(id)` : removes the value associated with the provided `id`
-- `update(id, data)` : replace the value with the associated `id` with the provided `data
+- `update(id, data)` : replace the value with the associated `id` with the provided `data`
 
 The database don't check for data format, it's your responsability to validate the incoming data with a library like JOI (see the guide for when to add validation)
 
