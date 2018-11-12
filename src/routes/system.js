@@ -1,5 +1,5 @@
 import expressPromiseRouter from 'express-promise-router'
-import {token} from "../constants/token"
+import {token} from '../constants/token'
 
 export const systemRouter = () => {
   const router = expressPromiseRouter()
