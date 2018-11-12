@@ -26,16 +26,23 @@ export const createMocks = () =>
     }
   }, {})
 
+Promise.resolve()
+
 export const database = {
   values: {...createMocks()},
-  getAll: () => Object.values(database.values),
-  getOne: id => prop(id, database.values),
+  getAll: () => Promise.resolve(Object.values(database.values)),
+  getOne: id => Promise.resolve(prop(id, database.values)),
   create: data => {
     const id = cuid()
     database.values = assoc(id, {...data, id}, database.values)
-    return id
+    return Promise.resolve(id)
   },
-  remove: id => (database.values = dissoc(id, database.values)),
-  update: (id, data) =>
-    (database.values = assoc(id, {...data, id}, database.values)),
+  remove: id => {
+    database.values = dissoc(id, database.values)
+    return Promise.resolve(true)
+  },
+  update: (id, data) => {
+    database.values = assoc(id, {...data, id}, database.values)
+    return Promise.resolve(true)
+  },
 }
