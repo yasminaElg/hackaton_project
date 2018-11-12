@@ -102,7 +102,8 @@ Don't forget to remove all related imports and reference to those files in `app.
 You can edit `App.js` and see the modification in your browser, the react app reloads everytime you save your changes !
 
 **Finally, don't forget the version control.
-Create a repository on GitHub and push your new project. You will find plenty of tutorials on how to do so on Google :D.**
+Create a repository on GitHub and push your new project. You will find plenty of tutorials on how to do so on Google :D.
+Don't forget to commit on a regular basis when doing the project**
 
 ## Task: Frontend - The landing page
 
