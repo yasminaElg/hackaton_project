@@ -2,7 +2,7 @@
 
 ## PiouPiou training
 
-This repo is used in the first week project for new Shippr interns. sett `docs/guide.md`
+This repo is used in the first week project for new Shippr interns. See `docs/guide.md`
 
 ## Setup
 - Clone this repo
