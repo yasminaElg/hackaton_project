@@ -26,8 +26,6 @@ export const createMocks = () =>
     }
   }, {})
 
-Promise.resolve()
-
 export const database = {
   values: {...createMocks()},
   getAll: () => Promise.resolve(Object.values(database.values)),
