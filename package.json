@@ -25,7 +25,6 @@
     "babel-preset-stage-3": "^6.24.1",
     "nodemon": "^1.18.5",
     "eslint": "^5.8.0",
-    "eslint-plugin-import": "^2.14.0",
     "babel-eslint": "^10.0.1"
   }
 }
