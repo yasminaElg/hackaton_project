@@ -5,18 +5,21 @@
 This repo is used in the first week project for new Shippr interns. See `docs/guide.md`
 
 ## Setup
+
 - Clone this repo
 - run `yarn` to install dependencies
 - Run the backend on `http://localhost:3003` with `yarn start`
 - if `http://localhost:3003/system/ping` respond with `pong`, the backend is running correctly
 
 ## Features
+
 - A test route `/system/ping`
 - An authentication middleware `src/middlewares/authentication`
 - A token providing route : `/system/login`
 - An in-memory DB which can performs all 5 CRUDL actions
 
 ## In-memory DB
+
 This project provides you a little in-memory DB (stored in a variable).
 You will use it to created your first routes (see the guide).
 
