@@ -15,6 +15,13 @@ const mockValues = [
     date: '2018-11-14T12:00:00.000',
     address: 'Rue des palais, 44, 1030 Bruxelles',
   },
+  {
+    title: 'Christmas !',
+    description:
+      'We will be making a Bot named MR.COTY who will answer questions.',
+    date: '2018-12-14T12:00:00.000',
+    address: 'Rue des palais, 44, 1030 Bruxelles',
+  }
 ]
 
 export const createMocks = () =>
