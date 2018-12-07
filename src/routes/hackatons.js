@@ -1,66 +1,40 @@
 import expressPromiseRouter from 'express-promise-router'
 import {database} from '../database/database'
-import boom from 'boom'
+import {validateID} from '../middlewares/validateID'
+import {validateToken} from '../middlewares/authentication'
+
+const getAll = (req, res) => {
+  database.getAll().then(data => res.json(data))
+}
+
+const getOne = async (req, res) => {
+  const data = await database.getOne(req.params.id)
+  res.json(data)
+}
+
+const create = async (req, res) => {
+  const id = await database.create(req.body)
+  res.json(await database.getOne(id))
+}
+
+const remove = async (req, res) => {
+  await database.remove(req.params.id)
+  res.status(204).end()
+}
+
+const update = async (req, res) => {
+  await database.update(req.params.id, req.body)
+  res.json(await database.getOne(req.params.id))
+}
 
 export const hackatonRouter = () => {
   const router = expressPromiseRouter()
 
-  const getAll = (req, res) => {
-    database.getAll().then(data => res.json(data))
-  }
-
-  const getOne = async (req, res) => {
-    const hack = await checkId(req)
-    if (!hack) {
-      const boomed = boom.notFound(
-        'Invalid id ! You should try again with an existing id.'
-      )
-      return res.status(boomed.output.statusCode).json(boomed.output.payload)
-    } else {
-      database.getOne(req.params.id).then(data => res.json(data))
-    }
-  }
-
-  const create = async (req, res) => {
-    const hack = await database.create(req.body)
-    res.json(await database.getOne(hack))
-  }
-
-  const remove = async (req, res) => {
-    const hack = await checkId(req)
-    if (hack) {
-      database.remove(req.params.id).then(() => getOne(req, res))
-    } else {
-      const boomed = boom.notFound(
-        'Invalid id ! You should try again with an existing id.'
-      )
-      return res.status(boomed.output.statusCode).json(boomed.output.payload)
-    }
-  }
-
-  const update = async (req, res) => {
-    const hack = await checkId(req)
-    if (hack) {
-      database.update(req.params.id, req.body).then(() => getOne(req, res))
-    } else {
-      const boomed = boom.notFound(
-        'Invalid id ! You should try again with an existing id.'
-      )
-      return res.status(boomed.output.statusCode).json(boomed.output.payload)
-    }
-  }
-
-  const checkId = async req => {
-    const hacks = await database.getAll()
-    const hack = hacks.find(data => data.id === req.params.id)
-    return hack
-  }
-
   router.get('/', getAll)
-  router.get('/:id', getOne)
-  router.post('/', create)
-  router.delete('/:id', remove)
-  router.patch('/:id', update)
+  router.get('/:id', validateToken, validateID, getOne)
+  router.post('/', validateToken, create)
+  router.delete('/:id', validateToken, validateID, remove)
+  router.patch('/:id', validateToken, validateID, update)
 
   return router
 }

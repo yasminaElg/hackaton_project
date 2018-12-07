@@ -39,7 +39,9 @@ export const database = {
   getOne: id => Promise.resolve(prop(id, database.values)),
   create: data => {
     const id = cuid()
+    console.log('data', data)
     database.values = assoc(id, {...data, id}, database.values)
+    console.log('database.values', database.values)
     return Promise.resolve(id)
   },
   remove: id => {
