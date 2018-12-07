@@ -2,6 +2,7 @@ import expressPromiseRouter from 'express-promise-router'
 import {database} from '../database/database'
 import {validateID} from '../middlewares/validateID'
 import {validateToken} from '../middlewares/authentication'
+import {validateSchema} from '../middlewares/validateSchema'
 
 const getAll = (req, res) => {
   database.getAll().then(data => res.json(data))
@@ -32,9 +33,9 @@ export const hackatonRouter = () => {
 
   router.get('/', getAll)
   router.get('/:id', validateToken, validateID, getOne)
-  router.post('/', validateToken, create)
+  router.post('/', validateToken, validateSchema, create)
   router.delete('/:id', validateToken, validateID, remove)
-  router.patch('/:id', validateToken, validateID, update)
+  router.patch('/:id', validateToken, validateID, validateSchema, update)
 
   return router
 }

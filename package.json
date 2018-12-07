@@ -16,6 +16,7 @@
     "cuid": "^2.1.4",
     "express": "^4.16.4",
     "express-promise-router": "^3.0.3",
+    "joi": "^14.3.0",
     "ramda": "^0.25.0"
   },
   "devDependencies": {
