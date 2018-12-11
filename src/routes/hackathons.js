@@ -28,7 +28,7 @@ const update = async (req, res) => {
   res.json(await database.getOne(req.params.id))
 }
 
-export const hackatonRouter = () => {
+export const hackathonRouter = () => {
   const router = expressPromiseRouter()
 
   router.get('/', getAll)

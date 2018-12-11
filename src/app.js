@@ -1,7 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import {systemRouter} from './routes/system'
-import {hackatonRouter} from './routes/hackatons'
+import {hackathonRouter} from './routes/hackathons'
 import cors from 'cors'
 
 
@@ -21,7 +21,7 @@ export const createExpressApp = () => {
 
   // Routes
   app.use('/system', systemRouter())
-  app.use('/hackatons', hackatonRouter())
+  app.use('/hackatons', hackathonRouter())
 
   return app
 }
