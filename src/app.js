@@ -21,7 +21,7 @@ export const createExpressApp = () => {
 
   // Routes
   app.use('/system', systemRouter())
-  app.use('/hackatons', hackathonRouter())
+  app.use('/hackathons', hackathonRouter())
 
   return app
 }

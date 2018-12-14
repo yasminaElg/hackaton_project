@@ -1,9 +1,11 @@
 import boom from 'boom'
-import {database} from '../database/database'
+import {getRepository} from 'typeorm'
+import {Hackathon} from '../entities/entityHackathon'
+
 
 export const validateID = async (req, res, next) => {
-  const hacks = await database.getAll()
-  const hack = hacks.find(data => data.id === req.params.id)
+  const repository = getRepository(Hackathon)
+  const hack = repository.findOne({id:req.params.id})
 
   if(!hack) {
     const boomed = boom.notFound(

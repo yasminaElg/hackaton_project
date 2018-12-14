@@ -1,3 +1,5 @@
+import {Hackathon} from '../entities/entityHackathon'
+
 export const dbConfig = {
   type: 'postgres',
   host: 'localhost',
@@ -5,9 +7,7 @@ export const dbConfig = {
   username: 'postgres',
   password: 'root',
   database: 'postgres',
-  entities: [
-    // Add entities here
-  ],
+  entities: [Hackathon],
   logging: true,
   synchronize: true,
 }
